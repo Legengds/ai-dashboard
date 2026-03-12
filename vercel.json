@@ -1,8 +1,12 @@
 {
-  "buildCommand": "npm run build",
+  "buildCommand": "cd ../dashboard && npm run build && cp -r dist/* ../dashboard-backend/dist/",
   "outputDirectory": "dist",
-  "installCommand": "npm install",
-  "framework": "vite",
+  "installCommand": "cd ../dashboard && npm install",
+  "framework": null,
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/$1" },
+    { "source": "/(.*)", "index": "index.html" }
+  ],
   "env": {
     "TURSO_DATABASE_URL": "libsql://dashboard-legengds.aws-ap-northeast-1.turso.io"
   }
