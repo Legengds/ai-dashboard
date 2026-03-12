@@ -1,0 +1,9 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "installCommand": "npm install",
+  "framework": "vite",
+  "env": {
+    "TURSO_DATABASE_URL": "libsql://dashboard-legengds.aws-ap-northeast-1.turso.io"
+  }
+}
