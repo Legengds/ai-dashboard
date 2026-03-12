@@ -2,7 +2,7 @@
   "buildCommand": "cd ../dashboard && npm run build && cp -r dist/* ../dashboard-backend/dist/",
   "outputDirectory": "dist",
   "installCommand": "cd ../dashboard && npm install",
-  "framework": null,
+  "framework": "vite",
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api/$1" },
     { "source": "/(.*)", "index": "index.html" }
